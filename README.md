@@ -67,25 +67,25 @@ $('input[name="detailTree"]').each(function(index, ele) {
         treeId: $(ele).attr('id') || $(ele).attr('name') + index ,
         hidObj: $('input[name="detailTreeID"]').eq(index),
         checkEnable: true,
-         dataSource: function() { // 数据源
+        dataSource: function() { // 数据源
              if(!!!$('#zTreeSelect').val()){
                  alert('请先选择下拉菜单！');
                  return false;
              }
-          return "<%=request.getContextPath()%>/ztree/findLedgerTreeAjax.do";
+             return "<%=request.getContextPath()%>/ztree/findLedgerTreeAjax.do";
          },
          onCheck: function(checkedNode){
             var childNum = "";
             for (var i=0, l=checkedNode.length; i<l; i++) {
-                 childNum += checkedNode[i].custom2 + "，";
-		     }
-             if (childNum.length > 0 ) {
-                 childNum = childNum.substring(0, childNum.length-1);
-             }
-             $('input[name="other"]').eq(index).val(childNum);
-         }
-        });
+                childNum += checkedNode[i].custom2 + "，";
+		    }
+            if (childNum.length > 0 ) {
+                childNum = childNum.substring(0, childNum.length-1);
+            }
+            $('input[name="other"]').eq(index).val(childNum);
+        }
     });
+});
 ```
 ### f)	左侧树菜单
 ```
@@ -102,8 +102,8 @@ $('input[name="detailTree"]').each(function(index, ele) {
 ```
 ## 2.	参数
 
-|      参数       | 说明                                          		|
-| ------------- |:-------------:                                       |
+|      参数       | 说明                                          	    |
+| ------------- |-------------                                         |
 | width         | 下拉菜单宽度，默认为绑定的input的宽度                     |
 | hidObj        | 需要赋值的隐藏域对象                                    |
 | treeId        | ztree树的Id，明细行时可以传name，单个树的控件不需要传      |
