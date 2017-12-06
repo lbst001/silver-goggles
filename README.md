@@ -19,7 +19,7 @@
         });
 });
 ```
-### b)	使用远程数据,dataSource为url
+### b)	使用远程数据，dataSource为url
 ```
 // ztree下拉菜单
 $('#departName').ztreeSelect({
@@ -30,7 +30,7 @@ $('#departName').ztreeSelect({
 	}
 });
 ```
-### c)	使用远程数据,dataSource为function 此时可以根据页面的其他控件的值来动态获取数据，当需要的条件不成立时，不弹出ztree下拉菜单
+### c)	使用远程数据，dataSource为function 此时可以根据页面的其他控件的值来动态获取数据，当需要的条件不成立时，不弹出ztree下拉菜单
 ```
 // ztree下拉菜单
 $('#departName').ztreeSelect({
@@ -102,17 +102,20 @@ $('input[name="detailTree"]').each(function(index, ele) {
 ```
 ## 2.	参数
 
-|      参数       | 说明                                          |
-| ------------- |:-------------:                               |
-| width         | 下拉菜单宽度，默认为绑定的input的宽度                 |
-| hidObj        | 需要赋值的隐藏域对象                               |
-| treeId        | ztree树的Id，明细行时可以传name，单个树的控件不需要传     |
-|keepStatus     |是否保存展开闭合状态|
-|dataSource     |数据源|
-|beforeSelect   |单选ztree选中节点之前的回调函数，参数为当前节点 |
-|onSelect       | 单选ztree选中节点时的回调函数，参数为当前节点  |
-|        |                                                          |
-|checkEnable|是否开启复选                                             |
-|chkboxType |复选的关联关系                                            |
+|      参数       | 说明                                          		|
+| ------------- |:-------------:                                       |
+| width         | 下拉菜单宽度，默认为绑定的input的宽度                     |
+| hidObj        | 需要赋值的隐藏域对象                                    |
+| treeId        | ztree树的Id，明细行时可以传name，单个树的控件不需要传      |
+|keepStatus     |是否保存展开闭合状态                                     |
+|dataSource     |数据源                                                 |
+|beforeSelect   |单选ztree选中节点之前的回调函数，参数为当前节点             |
+|onSelect       | 单选ztree选中节点时的回调函数，参数为当前节点              |
+|initTree       | 初始化方法，参数为treeObj即为原生的zTree对象，可以尽情的使用原生对象的方法|
+|defaultOptionLabel| 使用下拉菜单式添加默认的“--请选择--”或者全部|
+|position|下拉框弹出的方向，默认向下，支持'auto'自己计算弹出的方向|
+|           	|                                                      |
+|checkEnable|是否开启复选                                                |
+|chkboxType |复选的关联关系                                              |
 |beforeCheck|复选ztree勾选节点之前的回调函数，参数为当前节点                 |
-|onCheck|复选ztree勾选节点时的回调函数，参数为所有已勾选的节点              |
+|onCheck|复选ztree勾选节点时的回调函数，参数为所有已勾选的节点                |
