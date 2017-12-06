@@ -23,11 +23,11 @@
 ```
 // ztree下拉菜单
 $('#departName').ztreeSelect({
-hidObj: $('#ledgerID'),
-dataSource : '<%=request.getContextPath()%>/ztree/findLedgerTreeAjax.do',
-onSelect: function(currentNode){
-$('#ledgerName').val(currentNode.name);
-}
+	hidObj: $('#ledgerID'),
+	dataSource : '<%=request.getContextPath()%>/ztree/findLedgerTreeAjax.do',
+	onSelect: function(currentNode){
+		$('#ledgerName').val(currentNode.name);
+	}
 });
 ```
 ### c)	使用远程数据,dataSource为function 此时可以根据页面的其他控件的值来动态获取数据，当需要的条件不成立时，不弹出ztree下拉菜单
@@ -62,11 +62,11 @@ $('#departName').ztreeSelect({
 ```
 // 明细行中的树
 $('input[name="detailTree"]').each(function(index, ele) {
-$(this).ztreeSelect({
-width: '300px',
-treeId: $(ele).attr('id') || $(ele).attr('name') + index ,
-hidObj: $('input[name="detailTreeID"]').eq(index),
-checkEnable: true,
+    $(this).ztreeSelect({
+        width: '300px',
+        treeId: $(ele).attr('id') || $(ele).attr('name') + index ,
+        hidObj: $('input[name="detailTreeID"]').eq(index),
+        checkEnable: true,
          dataSource: function() { // 数据源
              if(!!!$('#zTreeSelect').val()){
                  alert('请先选择下拉菜单！');
