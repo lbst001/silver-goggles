@@ -68,7 +68,7 @@ $('input[name="detailTree"]').each(function(index, ele) {
         hidObj: $('input[name="detailTreeID"]').eq(index),
         checkEnable: true,
         dataSource: function() { // 数据源
-             if(!!!$('#zTreeSelect').val()){
+             if(!$('#zTreeSelect').val()){
                  alert('请先选择下拉菜单！');
                  return false;
              }
